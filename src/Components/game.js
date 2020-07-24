@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Square from "./square"
 import Board from "./board"
+import css from "./game.css"
 
 function calculateWinner(squares) {
     const lines = [
@@ -91,6 +92,7 @@ class Game extends React.Component {
       <div className="game">
         <div className="game-board">
           <Board
+            winner= {winner}
             squares={current.squares}
             onClick={i => this.handleClick(i)}
           />
